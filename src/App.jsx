@@ -4,7 +4,7 @@ const App = () => {
 
   const [title, setTitle] = useState('')
   const [details, setDetails] = useState('')
-
+  
   const [task, setTask] = useState([])
 
   const submitHandler = (e) => {
@@ -77,10 +77,11 @@ const App = () => {
                 <h3 className='leading-tight text-lg font-bold'>{elem.title}</h3>
                 <p className='mt-2 leading-tight text-xs font-semibold text-gray-600'>{elem.details}</p>
               </div>
+              
               <button onClick={() => {
                 deleteNote(idx)
 
-              }} className='w-full cursor-pointer active:scale-95 bg-red-500 py-1 text-xs rounded font-bold text-white'>Delete</button>
+              }} className='w-full cursor-pointer active:scale-95 bg-red-500 py-1 text-xs rounded font-bold text-white'> Delete </button>
             </div>
           })}
         </div>
